@@ -8,4 +8,4 @@ I Nyoman Danu Daksawan Randysmara
 
 Pemrograman Mobile (A)
 
-[Poster](img/poster.jpg)
+![img/poster.jpg](img/poster.jpg)
