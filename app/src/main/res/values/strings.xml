@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Intent and Activity</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="belum_punya_akun_register">Belum punya akun? Register</string>
+    <string name="Fullname">Fullname</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="sudah_punya_akun_login">Sudah punya akun? Login</string>
+    <string name="get_started">Get Started</string>
+    <string name="pameraan">pameraan</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="halooo">Halooo</string>
+    <string name="login">Login</string>
+</resources>
