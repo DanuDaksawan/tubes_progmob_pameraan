@@ -12,4 +12,19 @@
     <string name="welcome_to">Welcome to</string>
     <string name="halooo">Halooo</string>
     <string name="login">Login</string>
+    <string name="mengikuti">Mengikuti</string>
+    <string name="jelajahi">Jelajahi</string>
+    <string name="posting_karya">Posting Karya</string>
+    <string name="harga">Harga</string>
+    <string name="judul_karya">Judul Karya</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="keterangan_karya">Keterangan Karya</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="harga_karya">Harga Karya</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="alamat">Alamat</string>
+    <string name="kota">Kota</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="posting">Posting</string>
 </resources>
