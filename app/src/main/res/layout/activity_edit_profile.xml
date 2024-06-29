@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfileActivity">
+    >
 
     <ImageView
         android:id="@+id/profile_image"
@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_change_photo"
-        android:text="Change Photo"
+        android:text="@string/change_photo"
         android:textColor="@android:color/white" />
 
     <EditText
@@ -32,7 +32,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Name"
+        android:hint="@string/name"
         android:background="@drawable/edit_text_border" />
 
     <EditText
@@ -43,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Username"
+        android:hint="@string/username_editprofil"
         android:background="@drawable/edit_text_border" />
 
     <EditText
@@ -54,7 +54,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Bio"
+        android:hint="@string/bio_editprofil"
         android:background="@drawable/edit_text_border" />
 
     <EditText
@@ -65,7 +65,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Location"
+        android:hint="@string/location_editprofil"
         android:background="@drawable/edit_text_border" />
 
     <Button
@@ -76,7 +76,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_save"
-        android:text="Save"
+        android:text="@string/btn_save"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

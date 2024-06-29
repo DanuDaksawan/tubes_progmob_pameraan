@@ -29,4 +29,10 @@
     <string name="posting">Posting</string>
     <string name="i_nyoman_danu_daksawan_randysmara">I Nyoman Danu Daksawan Randysmara</string>
     <string name="danudaksawan">danudaksawan</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="name">Name</string>
+    <string name="username_editprofil">Username</string>
+    <string name="bio_editprofil">Bio</string>
+    <string name="location_editprofil">Location</string>
+    <string name="btn_save">Save</string>
 </resources>
