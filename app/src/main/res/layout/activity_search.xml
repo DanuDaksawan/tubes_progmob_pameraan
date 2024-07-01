@@ -134,15 +134,15 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/SearchView"
-        android:layout_margin="8dp"
-        android:background="@drawable/searchview_bg"
         android:layout_width="386dp"
         android:layout_height="38dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/searchview_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp"
-        app:queryHint="Search Here...."/>
+        app:queryHint="Search Here...."
+        tools:layout_editor_absoluteY="16dp" />
 
     <SearchView
         android:id="@+id/searchView"
@@ -152,7 +152,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="16dp" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
