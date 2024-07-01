@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp"
         tools:context=".TambahKaryaActivity">
 
@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/tombolx"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +39,8 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/garisbawah"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnback_tambahkarya" />
+            app:layout_constraintTop_toBottomOf="@+id/btnback_tambahkarya"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/tambahgambar"
@@ -48,7 +50,8 @@
             android:src="@drawable/tambahgambar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/garisbawah" />
+            app:layout_constraintTop_toBottomOf="@id/garisbawah"
+            tools:ignore="ContentDescription" />
 
         <EditText
             android:id="@+id/judulkarya"
@@ -61,7 +64,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tambahgambar" />
+            app:layout_constraintTop_toBottomOf="@id/tambahgambar"
+            tools:ignore="Autofill,TextFields" />
 
         <EditText
             android:id="@+id/deskripsi"
@@ -74,7 +78,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/judulkarya" />
+            app:layout_constraintTop_toBottomOf="@id/judulkarya"
+            tools:ignore="Autofill,TextFields" />
 
         <TextView
             android:id="@+id/tvketerangan"
@@ -98,7 +103,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvketerangan" />
+            app:layout_constraintTop_toBottomOf="@id/tvketerangan"
+            tools:ignore="Autofill,TextFields" />
 
         <EditText
             android:id="@+id/jumlah"
@@ -111,7 +117,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/keterangan" />
+            app:layout_constraintTop_toBottomOf="@id/keterangan"
+            tools:ignore="Autofill,TextFields" />
 
         <TextView
             android:id="@+id/tvharga"
@@ -135,7 +142,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvharga" />
+            app:layout_constraintTop_toBottomOf="@id/tvharga"
+            tools:ignore="Autofill,TextFields" />
 
         <TextView
             android:id="@+id/tvlokasi"
@@ -159,7 +167,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvlokasi" />
+            app:layout_constraintTop_toBottomOf="@id/tvlokasi"
+            tools:ignore="Autofill,TextFields" />
 
         <EditText
             android:id="@+id/kota"
@@ -172,7 +181,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alamat" />
+            app:layout_constraintTop_toBottomOf="@id/alamat"
+            tools:ignore="Autofill,TextFields" />
 
         <EditText
             android:id="@+id/provinsi"
@@ -186,7 +196,7 @@
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/kota"
-            tools:ignore="DuplicateIds" />
+            tools:ignore="Autofill,DuplicateIds,TextFields" />
 
         <Button
             android:id="@+id/btnposting"

@@ -2,25 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="@drawable/item_background"
     android:elevation="2dp"
-    android:margin="8dp">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/transactionDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deskripsi Transaksi"
-        android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:text="@string/deskripsi_transaksi"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/transactionAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jumlah Transaksi"
+        android:text="@string/jumlah_transaksi"
         android:textColor="@color/primary"
         android:textSize="16sp" />
 
@@ -28,7 +27,10 @@
         android:id="@+id/transactionDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tanggal Transaksi"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray" />
+        android:text="@string/tanggal_transaksi"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
 </LinearLayout>
+
+

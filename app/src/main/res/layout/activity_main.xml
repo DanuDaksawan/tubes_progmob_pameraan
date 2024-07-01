@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -23,7 +22,8 @@
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="16dp"
+                tools:ignore="UselessParent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -33,22 +33,26 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_1" />
+                        android:src="@drawable/gambar_1"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_2" />
+                        android:src="@drawable/gambar_2"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_3" />
+                        android:src="@drawable/gambar_3"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_4" />
+                        android:src="@drawable/gambar_4"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
 
@@ -60,22 +64,26 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_5" />
+                        android:src="@drawable/gambar_5"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_6" />
+                        android:src="@drawable/gambar_6"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_2" />
+                        android:src="@drawable/gambar_2"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar_1" />
+                        android:src="@drawable/gambar_1"
+                        tools:ignore="ContentDescription" />
 
                 </LinearLayout>
 
@@ -109,7 +117,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="6dp"
-            android:src="@drawable/pembatas">
+            android:src="@drawable/pembatas"
+            tools:ignore="ContentDescription">
 
         </ImageView>
 
@@ -139,32 +148,37 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginHorizontal="20dp"
-            android:src="@drawable/home" />
+            android:src="@drawable/home"
+            tools:ignore="ContentDescription" />
 
         <ImageView
+            android:id="@+id/tombolsearch"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginHorizontal="20dp"
             android:src="@drawable/search"
-            android:id="@+id/tombolsearch"/>
+            tools:ignore="ContentDescription" />
 
         <ImageView
+            android:id="@+id/tomboltambah"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginHorizontal="20dp"
             android:src="@drawable/tambah"
-            android:id="@+id/tomboltambah"/>
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginHorizontal="20dp"
-            android:src="@drawable/shop" />
+            android:src="@drawable/shop"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginHorizontal="20dp"
-            android:src="@drawable/profile" />
+            android:src="@drawable/profile"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 </RelativeLayout>

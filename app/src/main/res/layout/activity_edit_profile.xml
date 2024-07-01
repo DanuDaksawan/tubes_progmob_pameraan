@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/profile_image"
@@ -29,44 +28,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/change_photo_button"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:hint="@string/name"
-        android:background="@drawable/edit_text_border" />
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/name" />
 
     <EditText
         android:id="@+id/edit_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_name"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:hint="@string/username_editprofil"
-        android:background="@drawable/edit_text_border" />
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/username_editprofil" />
 
     <EditText
         android:id="@+id/edit_bio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_username"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:hint="@string/bio_editprofil"
-        android:background="@drawable/edit_text_border" />
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/bio_editprofil" />
 
     <EditText
         android:id="@+id/edit_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_bio"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:hint="@string/location_editprofil"
-        android:background="@drawable/edit_text_border" />
+        android:background="@drawable/edit_text_border"
+        android:hint="@string/location_editprofil" />
 
     <Button
         android:id="@+id/save_button"

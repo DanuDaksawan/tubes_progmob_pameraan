@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Change Account"
+        android:layout_marginStart="20dp"
+        android:text="@string/change_account"
         android:textSize="18sp"
         android:textColor="@android:color/black" />
 
@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/change_account_text"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Logout"
+        android:layout_marginStart="20dp"
+        android:text="@string/logout"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

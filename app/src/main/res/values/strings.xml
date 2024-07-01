@@ -35,4 +35,21 @@
     <string name="bio_editprofil">Bio</string>
     <string name="location_editprofil">Location</string>
     <string name="btn_save">Save</string>
+    <string name="kursi_kayu">Kursi Kayu</string>
+    <string name="img_pilihproduk_jumlahkursi">Jumlah</string>
+    <string name="tambahkan_ke_keranjang">Tambahkan ke Keranjang</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="btn_tambah_transaksi">Tambah Transaksi</string>
+    <string name="keranjang_saya">Keranjang Saya</string>
+    <string name="tambah_transaksi">Tambah Transaksi</string>
+    <string name="rp_329_000">Rp 329.000</string>
+    <string name="_0">0</string>
+    <string name="sedang_mencoba_berkarya">sedang mencoba berkarya</string>
+    <string name="bali_indonesia">| Bali, Indonesia</string>
+    <string name="_1_karya_12_pengikut_20_mengikuti">1 Karya | 12 Pengikut | 20 Mengikuti</string>
+    <string name="change_account">Change Account</string>
+    <string name="logout">Logout</string>
+    <string name="deskripsi_transaksi">Deskripsi Transaksi</string>
+    <string name="tanggal_transaksi">Tanggal Transaksi</string>
+    <string name="jumlah_transaksi">Jumlah Transaksi</string>
 </resources>

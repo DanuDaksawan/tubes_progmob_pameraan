@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    tools:context=".PilihProdukActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/gambarkursi"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginTop="16dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/gambar_3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="-187dp" />
+
+            <TextView
+                android:id="@+id/kursikayu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="32dp"
+                android:text="@string/kursi_kayu"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/gambarkursi" />
+
+            <TextView
+                android:id="@+id/hargakursi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="32dp"
+                android:text="@string/rp_329_000"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/kursikayu" />
+
+
+            <TextView
+                android:id="@+id/jumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="32dp"
+                android:text="@string/img_pilihproduk_jumlahkursi"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/hargakursi"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/btnmin"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="220dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/btnmin"
+                app:layout_constraintBottom_toBottomOf="@id/jumlah"
+                app:layout_constraintStart_toEndOf="@id/jumlah"
+                app:layout_constraintTop_toTopOf="@id/jumlah" />
+
+            <TextView
+                android:id="@+id/text_pilihproduk_banyakjumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="@string/_0"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/jumlah"
+                app:layout_constraintStart_toEndOf="@id/btnmin"
+                app:layout_constraintTop_toTopOf="@id/jumlah" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/btnplus"
+                app:layout_constraintBottom_toBottomOf="@id/jumlah"
+                app:layout_constraintStart_toEndOf="@id/text_pilihproduk_banyakjumlah"
+                app:layout_constraintTop_toTopOf="@id/jumlah" />
+
+            <Button
+                android:layout_width="352dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/buttonroundedfull"
+                android:text="@string/tambahkan_ke_keranjang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jumlah" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/solidbutton"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/home"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/search"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/tomboltambah"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/tambah"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/shop"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/profile"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+</RelativeLayout>
