@@ -23,7 +23,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:text="Logout"
-        android:background="@drawable/button_logout"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>
