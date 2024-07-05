@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-287dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bgprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bgprofil"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bgbio"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/fotoprofil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="-220dp"
+                android:src="@drawable/default_profil"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedImage"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/namaprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/space"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/fotoprofil" />
+
+            <TextView
+                android:id="@+id/usernameprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="-1dp"
+                android:text="@string/space"
+                android:textColor="#B8B8B8"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/namaprofil" />
+
+            <ImageView
+                android:id="@+id/buttonsetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="-76dp"
+                android:src="@drawable/settings"
+                app:layout_constraintTop_toBottomOf="@id/bgprofil"
+                tools:ignore="ContentDescription" />
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="321dp"-->
+<!--                android:layout_marginTop="-24dp"-->
+<!--                android:src="@drawable/btneditprofil"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/bgprofil"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+            <TextView
+                android:id="@+id/bioprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="65dp"
+                android:text="@string/space"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/namaprofil" />
+
+            <TextView
+                android:id="@+id/alamatprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/space"
+                android:textColor="#B8B8B8"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/bio" />
+
+            <TextView
+                android:id="@+id/jumlahpengikut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/_1_karya_12_pengikut_20_mengikuti"
+                android:textColor="#B8B8B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bio" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_1"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_2"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_3"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_4"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_5"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_6"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_2"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/gambar_1"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                </LinearLayout>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewKarya1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginTop="16dp"
+                    android:clipToPadding="false"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/belumAdaKaryaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/belum_ada_karya"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

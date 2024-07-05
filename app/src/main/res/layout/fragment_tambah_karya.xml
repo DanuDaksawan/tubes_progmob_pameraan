@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".TambahKaryaActivity">
+
+        <ImageView
+            android:id="@+id/btnback_tambahkarya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tombolx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/posting_karya"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/garisbawah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/garisbawah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnback_tambahkarya"
+            tools:ignore="ContentDescription" />
+
+
+
+        <ImageView
+            android:id="@+id/tambahgambar"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/tambahgambar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/garisbawah"
+            tools:ignore="ContentDescription" />
+
+        <!-- Button to select image -->
+        <Button
+            android:id="@+id/selectImageButton"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/select_image"
+            android:background="@drawable/solidbutton"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tambahgambar" />
+
+        <EditText
+            android:id="@+id/judulkarya"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonroundshape"
+            android:hint="@string/judul_karya"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectImageButton"
+            tools:ignore="Autofill,TextFields" />
+
+        <EditText
+            android:id="@+id/deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/buttonroundshape"
+            android:hint="@string/deskripsi"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:gravity="top"
+            android:textSize="12sp"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/judulkarya"
+            tools:ignore="Autofill,TextFields" />
+
+        <TextView
+            android:id="@+id/tvharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/harga_karya"
+            android:textColor="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deskripsi" />
+
+        <EditText
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/buttonroundshape"
+            android:hint="@string/harga"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvharga"
+            tools:ignore="Autofill,TextFields" />
+
+        <Button
+            android:id="@+id/btnposting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/solidbutton"
+            android:text="@string/posting"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/harga" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

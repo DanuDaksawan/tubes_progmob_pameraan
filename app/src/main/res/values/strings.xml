@@ -3,7 +3,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="belum_punya_akun_register">Belum punya akun? Register</string>
-    <string name="Fullname">Fullname</string>
+    <string name="Fullname">Full Name</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="sudah_punya_akun_login">Sudah punya akun? Login</string>
@@ -52,4 +52,26 @@
     <string name="deskripsi_transaksi">Deskripsi Transaksi</string>
     <string name="tanggal_transaksi">Tanggal Transaksi</string>
     <string name="jumlah_transaksi">Jumlah Transaksi</string>
+    <string name="jumlah_1">Jumlah: 1</string>
+    <string name="total_rp_329_000">Total: Rp 329.000</string>
+    <string name="jumlah_pesanan">Jumlah Pesanan</string>
+    <string name="harga_pesanan">Harga Pesanan</string>
+    <string name="pajak">Pajak</string>
+    <string name="total_harga">Total Harga</string>
+    <string name="total_biayaharga">Rp 361.900</string>
+    <string name="konfirmasi_pesanan">Konfirmasi Pesanan</string>
+    <string name="hargapajak">Rp 32.900</string>
+    <string name="hargapesanan">Rp 329.000</string>
+    <string name="telepon">Telepon</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="cart">Cart</string>
+    <string name="profil">Profil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_image">Select Image</string>
+    <string name="space" />
+    <string name="log_out">LOG OUT</string>
+    <string name="belum_ada_karya">Belum Ada Karya</string>
 </resources>

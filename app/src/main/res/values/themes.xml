@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.IntentAndActivity" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.IntentAndActivity" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="ShapeAppearanceOverlay.App.RoundedImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Style untuk ImageView dengan sudut tumpul -->
+    <style name="RoundedImageView" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearanceOverlay">@style/RoundedCorners</item>
+    </style>
+
+    <!-- ShapeAppearance style untuk mendefinisikan sudut tumpul -->
+    <style name="RoundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 </resources>

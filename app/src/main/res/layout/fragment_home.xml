@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/jelajahi"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:background="@drawable/solidbutton"
+            android:paddingHorizontal="8dp"
+            android:text="@string/jelajahi"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="9dp"
+            android:src="@drawable/pembatas"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/mengikuti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/buttontransparan"
+            android:text="@string/mengikuti"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:listitem="@layout/item_karya"/>
+
+            <TextView
+                android:id="@+id/belumAdaKaryaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/belum_ada_karya"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

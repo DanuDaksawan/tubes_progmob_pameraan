@@ -1,11 +1,11 @@
 package com.example.intentandactivity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
-class PilihProdukActicity : AppCompatActivity() {
+class MenuSettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pilih_produk_acticity)
+        setContentView(R.layout.activity_menu_setting)
     }
 }

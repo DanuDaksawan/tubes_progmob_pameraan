@@ -5,12 +5,19 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tombolx"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
         android:id="@+id/profile_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/fotoprofil" />
+        android:src="@drawable/default_profil" />
 
     <Button
         android:id="@+id/change_photo_button"
@@ -26,56 +33,71 @@
     <EditText
         android:id="@+id/edit_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/change_photo_button"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/name" />
+        android:background="@drawable/buttonroundshape"
+        android:hint="@string/space" />
 
     <EditText
         android:id="@+id/edit_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/edit_name"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/username_editprofil" />
+        android:background="@drawable/buttonroundshape"
+        android:hint="@string/space" />
 
     <EditText
         android:id="@+id/edit_bio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_below="@id/edit_username"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/bio_editprofil" />
+        android:background="@drawable/buttonroundshape"
+        android:hint="@string/space" />
 
     <EditText
         android:id="@+id/edit_location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/edit_bio"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="@string/location_editprofil" />
+        android:background="@drawable/buttonroundshape"
+        android:hint="@string/space" />
 
     <Button
         android:id="@+id/save_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_location"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/button_save"
         android:text="@string/btn_save"
         android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_out"
+        android:textColor="@color/white"
+        android:text="@string/log_out"/>
 
 </RelativeLayout>

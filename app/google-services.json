@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880362333173",
+    "project_id": "pameraan-822eb",
+    "storage_bucket": "pameraan-822eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880362333173:android:de33663a9bc3416f1cf6bc",
+        "android_client_info": {
+          "package_name": "com.example.intentandactivity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs0qjn8wCizjAH9kX4tV5tCZx2B7-iKS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
