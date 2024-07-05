@@ -1,12 +1,26 @@
 package com.example.intentandactivity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 
 class SearchActivity : AppCompatActivity() {
+
+    private lateinit var searchEditText: EditText
+    private lateinit var searchResultsRecyclerView: RecyclerView
+    private lateinit var searchAdapter: KaryaAdapter
+    private val searchResultsList = mutableListOf<Karya>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -16,5 +30,57 @@ class SearchActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        searchEditText = findViewById(R.id.search_edit_text)
+        searchResultsRecyclerView = findViewById(R.id.hasilcari)
+        val backButton = findViewById<ImageButton>(R.id.tombolx)
+
+        searchAdapter = KaryaAdapter(searchResultsList)
+        searchResultsRecyclerView.layoutManager = LinearLayoutManager(this)
+        searchResultsRecyclerView.adapter = searchAdapter
+
+        backButton.setOnClickListener {
+            finish()
+        }
+
+        searchEditText.addTextChangedListener(object : TextWatcher {
+            @SuppressLint("NotifyDataSetChanged")
+            override fun afterTextChanged(s: Editable?) {
+                val query = s.toString()
+                if (query.isNotEmpty()) {
+                    searchKarya(query)
+                } else {
+                    searchResultsList.clear()
+                    searchAdapter.notifyDataSetChanged()
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun searchKarya(query: String) {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("products")
+            .orderBy("judul")
+            .startAt(query)
+            .endAt(query + "\uf8ff")
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                searchResultsList.clear()
+                for (document in querySnapshot.documents) {
+                    val karya = document.toObject(Karya::class.java)
+                    if (karya != null) {
+                        searchResultsList.add(karya)
+                    }
+                }
+                searchAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener {
+                // Handle the error
+            }
     }
 }

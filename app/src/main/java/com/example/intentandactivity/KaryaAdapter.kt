@@ -19,10 +19,8 @@ class KaryaAdapter(private val karyaList: List<Karya>) :
     override fun onBindViewHolder(holder: KaryaViewHolder, position: Int) {
         val karya = karyaList[position]
 
-//        holder.textJudulKarya.text = karya.getJudul()
-
         // Memuat gambar menggunakan Glide dari URL yang diberikan oleh objek Karya
-        karya.getUrl()?.let { url ->
+        karya.url?.let { url ->
             Glide.with(holder.itemView.context)
                 .load(url)
                 .placeholder(R.drawable.default_profil) // Placeholder image jika URL kosong atau gambar gagal dimuat
@@ -37,6 +35,5 @@ class KaryaAdapter(private val karyaList: List<Karya>) :
 
     inner class KaryaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imageKarya: ImageView = itemView.findViewById(R.id.imageKarya)
-//        var textJudulKarya: TextView = itemView.findViewById(R.id.textJudulKarya)
     }
 }

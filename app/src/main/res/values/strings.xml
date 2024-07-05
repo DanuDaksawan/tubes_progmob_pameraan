@@ -74,4 +74,10 @@
     <string name="space" />
     <string name="log_out">LOG OUT</string>
     <string name="belum_ada_karya">Belum Ada Karya</string>
+    <string name="todo">TODO</string>
+    <string name="itemkarya">itemkarya</string>
+    <string name="cari_karya">Cari karya</string>
+    <string name="cari">Cari</string>
+    <string name="back">Back</string>
+    <string name="tambah_ke_keranjang">Tambah ke Keranjang</string>
 </resources>

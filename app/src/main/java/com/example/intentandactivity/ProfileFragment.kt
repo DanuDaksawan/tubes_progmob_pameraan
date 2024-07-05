@@ -120,10 +120,9 @@ class ProfileFragment : Fragment() {
 
                     for (document in querySnapshot.documents) {
                         val productName = document.getString("title") ?: ""
-                        val productDescription = document.getString("description") ?: ""
                         val productImageUrl = document.getString("url")
 
-                        karyaList.add(Karya(productName, productDescription, productImageUrl))
+                        karyaList.add(Karya(productName, productImageUrl))
                     }
                     karyaAdapter.notifyDataSetChanged()
                 }
