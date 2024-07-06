@@ -21,22 +21,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bgprofil"
+                android:src="@drawable/bgpameraangrad"
                 tools:ignore="ContentDescription" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bgbio"
+                android:src="@drawable/biogradasi"
                 tools:ignore="ContentDescription" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/fotoprofil"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="-220dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-240dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="40dp"
+                app:riv_oval="false"
                 android:src="@drawable/default_profil"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.RoundedImage"
                 tools:ignore="ContentDescription" />
@@ -46,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="17dp"
+                android:fontFamily="@font/montserrat_extrabold"
                 android:layout_marginTop="10dp"
                 android:text="@string/space"
                 android:textColor="@color/white"
@@ -56,6 +60,7 @@
                 android:id="@+id/usernameprofil"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="-1dp"
                 android:text="@string/space"
@@ -73,15 +78,6 @@
                 app:layout_constraintTop_toBottomOf="@id/bgprofil"
                 tools:ignore="ContentDescription" />
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginStart="321dp"-->
-<!--                android:layout_marginTop="-24dp"-->
-<!--                android:src="@drawable/btneditprofil"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/bgprofil"-->
-<!--                tools:ignore="ContentDescription" />-->
-
             <TextView
                 android:id="@+id/bioprofil"
                 android:layout_width="wrap_content"
@@ -89,6 +85,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="65dp"
                 android:text="@string/space"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="italic"
@@ -101,6 +98,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/space"
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="#B8B8B8"
                 android:textSize="12sp"
                 app:layout_constraintTop_toBottomOf="@id/bio" />
@@ -109,8 +107,9 @@
                 android:id="@+id/jumlahpengikut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
+                android:fontFamily="@font/montserrat_bold"
                 android:text="@string/_1_karya_12_pengikut_20_mengikuti"
                 android:textColor="#B8B8B8"
                 android:textSize="12sp"
@@ -124,68 +123,6 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:paddingHorizontal="16dp">
-
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_1"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_2"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_3"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_4"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                </LinearLayout>-->
-
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_5"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_6"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_2"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:src="@drawable/gambar_1"-->
-<!--                        tools:ignore="ContentDescription" />-->
-
-<!--                </LinearLayout>-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewKarya1"

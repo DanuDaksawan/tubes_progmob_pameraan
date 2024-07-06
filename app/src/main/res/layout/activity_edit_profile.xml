@@ -2,102 +2,168 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        tools:ignore="UselessLeaf">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:ignore="RtlSymmetry">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:riv_corner_radius="50dp"
+                app:riv_oval="false"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/default_profil" />
+
+            <Button
+                android:id="@+id/change_photo_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_change_photo"
+                android:text="@string/change_photo"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:padding="17dp"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/buttonroundshape"
+                android:hint="@string/space"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:padding="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/buttonroundshape"
+                android:hint="@string/space"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/edit_bio"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:padding="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="top"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/buttonroundshape"
+                android:hint="@string/space"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/edit_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="17dp"
+                android:background="@drawable/buttonroundshape"
+                android:hint="@string/space"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:background="@drawable/button_save"
+                android:text="@string/btn_save"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_out"
+                android:textColor="@color/white"
+                android:text="@string/log_out"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <ImageView
         android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:src="@drawable/tombolx"
         tools:ignore="ContentDescription" />
 
+    <TextView
+        android:id="@+id/pengaturanakun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/pengaturan_akun"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/default_profil" />
-
-    <Button
-        android:id="@+id/change_photo_button"
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_change_photo"
-        android:text="@string/change_photo"
-        android:textColor="@android:color/white" />
-
-    <EditText
-        android:id="@+id/edit_name"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/change_photo_button"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/buttonroundshape"
-        android:hint="@string/space" />
-
-    <EditText
-        android:id="@+id/edit_username"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/edit_name"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/buttonroundshape"
-        android:hint="@string/space" />
-
-    <EditText
-        android:id="@+id/edit_bio"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/edit_username"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/buttonroundshape"
-        android:hint="@string/space" />
-
-    <EditText
-        android:id="@+id/edit_location"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/edit_bio"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/buttonroundshape"
-        android:hint="@string/space" />
-
-    <Button
-        android:id="@+id/save_button"
+        android:id="@+id/garisbawah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_location"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button_save"
-        android:text="@string/btn_save"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/save_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button_out"
-        android:textColor="@color/white"
-        android:text="@string/log_out"/>
+        android:layout_marginTop="66dp"
+        android:src="@drawable/garisbawah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pengaturanakun"
+        tools:ignore="ContentDescription" />
 
 </RelativeLayout>

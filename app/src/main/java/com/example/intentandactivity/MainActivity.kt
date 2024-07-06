@@ -23,10 +23,6 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.search -> {
-                    loadFragment(SearchFragment())
-                    true
-                }
                 R.id.add -> {
                     loadFragment(TambahKaryaFragment())
                     true

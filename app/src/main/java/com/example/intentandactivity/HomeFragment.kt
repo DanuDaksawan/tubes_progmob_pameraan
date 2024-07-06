@@ -1,5 +1,6 @@
 package com.example.intentandactivity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -48,6 +49,7 @@ class HomeFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun fetchKarya() {
         val db = FirebaseFirestore.getInstance()
         val karyaRef = db.collection("products")
@@ -62,6 +64,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+    
     private fun checkForEmptyData() {
         if (karya.isEmpty()) {
             noArtTextView.visibility = View.VISIBLE

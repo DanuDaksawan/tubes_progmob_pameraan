@@ -1,6 +1,6 @@
 package com.example.intentandactivity
 
 data class Karya(
-    val judul: String = "",
+    val title: String = "",
     val url: String? = null
 )

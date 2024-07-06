@@ -51,6 +51,7 @@ android {
 }
 
 dependencies {
+    implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("com.google.android.material:material:1.6.1")
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))

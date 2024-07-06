@@ -6,9 +6,10 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="700dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-320dp"
+        android:layout_width="900dp"
+        android:layout_height="900dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="-300dp"
         android:src="@drawable/logo"
         android:importantForAccessibility="no" />
 
@@ -21,6 +22,8 @@
         android:layout_marginTop="300dp"
         android:layout_marginBottom="411dp"
         android:text="@string/welcome_to"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_regular"
         android:textSize="15sp"
         android:textColor="@color/primary" />
 
@@ -33,7 +36,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginBottom="392dp"
         android:text="@string/pameraan"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/primary"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -48,6 +51,7 @@
         android:layout_marginBottom="29dp"
         android:background="@drawable/button"
         android:text="@string/get_started"
+        android:fontFamily="@font/montserrat_bold"
         android:textStyle="bold"
         android:textAllCaps="false"
         android:textColor="@color/white"/>

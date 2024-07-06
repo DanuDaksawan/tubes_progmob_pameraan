@@ -47,6 +47,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="8dp"
                     android:text="Portrait of Woman"
+                    android:fontFamily="@font/montserrat_bold"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -54,8 +55,10 @@
                 <TextView
                     android:id="@+id/deskripsi"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
                     android:layout_height="wrap_content"
                     android:paddingBottom="16dp"
+                    android:textStyle="bold"
                     android:text="Lukisan ini bercerita tentang portrait dari seorang wanita yang dilukis dengan satu goresan."
                     android:textColor="@android:color/darker_gray"
                     android:textSize="14sp" />
@@ -66,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="8dp"
                     android:text="Harga Karya"
+                    android:fontFamily="@font/montserrat_bold"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -79,6 +83,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="Rp. 80.000,00"
+                    android:fontFamily="@font/montserrat_bold"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -112,6 +117,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/tambah_ke_keranjang"
+        android:fontFamily="@font/montserrat_bold"
         android:background="@drawable/solidbutton"
         android:textColor="@android:color/white"
         android:padding="12dp"

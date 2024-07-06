@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -27,6 +28,9 @@ class KaryaAdapter(private val karyaList: List<Karya>) :
                 .error(R.drawable.default_profil) // Gambar error jika gambar gagal dimuat
                 .into(holder.imageKarya)
         }
+
+        // Menampilkan judul Karya
+        holder.judulKarya.text = karya.title
     }
 
     override fun getItemCount(): Int {
@@ -35,5 +39,6 @@ class KaryaAdapter(private val karyaList: List<Karya>) :
 
     inner class KaryaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imageKarya: ImageView = itemView.findViewById(R.id.imageKarya)
+        var judulKarya: TextView = itemView.findViewById(R.id.judulkarya)
     }
 }
