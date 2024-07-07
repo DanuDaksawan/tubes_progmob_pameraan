@@ -1,6 +1,7 @@
 package com.example.intentandactivity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -35,7 +36,11 @@ class SearchActivity : AppCompatActivity() {
         searchResultsRecyclerView = findViewById(R.id.hasilcari)
         val backButton = findViewById<ImageButton>(R.id.tombolx)
 
-        searchAdapter = KaryaAdapter(searchResultsList)
+        searchAdapter = KaryaAdapter(searchResultsList) { karya ->
+            val intent = Intent(this, DetailKaryaActivity::class.java)
+            intent.putExtra("karyaId", karya.id)
+            startActivity(intent)
+        }
         searchResultsRecyclerView.layoutManager = LinearLayoutManager(this)
         searchResultsRecyclerView.adapter = searchAdapter
 

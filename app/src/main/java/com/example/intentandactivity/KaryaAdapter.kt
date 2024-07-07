@@ -8,8 +8,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class KaryaAdapter(private val karyaList: List<Karya>) :
-    RecyclerView.Adapter<KaryaAdapter.KaryaViewHolder>() {
+class KaryaAdapter(
+    private val karyaList: List<Karya>,
+    private val onItemCLick: (Karya) -> Unit
+) : RecyclerView.Adapter<KaryaAdapter.KaryaViewHolder>() {
+
+    inner class KaryaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var idKarya: TextView = itemView.findViewById(R.id.idKarya)
+        var imageKarya: ImageView = itemView.findViewById(R.id.imageKarya)
+        var judulKarya: TextView = itemView.findViewById(R.id.judulkarya)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KaryaViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -31,14 +39,19 @@ class KaryaAdapter(private val karyaList: List<Karya>) :
 
         // Menampilkan judul Karya
         holder.judulKarya.text = karya.title
+//        if (karya.id == null) {
+//            holder.idKarya.text = "Tidak ada"
+//        } else {
+//            holder.idKarya.text = karya.id
+//        }
+
+        holder.itemView.setOnClickListener{
+            onItemCLick(karya)
+        }
+
     }
 
     override fun getItemCount(): Int {
         return karyaList.size
-    }
-
-    inner class KaryaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imageKarya: ImageView = itemView.findViewById(R.id.imageKarya)
-        var judulKarya: TextView = itemView.findViewById(R.id.judulkarya)
     }
 }

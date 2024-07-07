@@ -1,5 +1,6 @@
 package com.example.intentandactivity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,9 +30,10 @@ class ProfileFragment : Fragment() {
 
     private val karyaList: MutableList<Karya> = mutableListOf() // List untuk menyimpan data produk
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
@@ -49,7 +51,11 @@ class ProfileFragment : Fragment() {
         val layoutManager = GridLayoutManager(requireContext(), numberOfColumns)
         recyclerViewKarya.layoutManager = layoutManager
 
-        karyaAdapter = KaryaAdapter(karyaList)
+        karyaAdapter = KaryaAdapter(karyaList) { karya ->
+            val intent = Intent(requireContext(), DetailKaryaActivity::class.java)
+            intent.putExtra("karyaId", karya.id)
+            startActivity(intent)
+        }
         recyclerViewKarya.adapter = karyaAdapter
 
         buttonSetting.setOnClickListener {
@@ -94,46 +100,89 @@ class ProfileFragment : Fragment() {
                         fotoprofil.setImageResource(R.drawable.default_profil)
                     }
 
-                    loadProducts(uid)
+                    fetchKarya()
                 } else {
-                    Toast.makeText(requireContext(), "Document does not exist", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Document does not exist", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }.addOnFailureListener { exception ->
-                Toast.makeText(requireContext(), "Failed to fetch user data: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "Failed to fetch user data: ${exception.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
 
-    private fun loadProducts(uid: String) {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun fetchKarya() {
         val db = FirebaseFirestore.getInstance()
-        db.collection("products")
-            .whereEqualTo("userId", uid)
-            .get()
-            .addOnSuccessListener { querySnapshot ->
-                karyaList.clear()
-                if (querySnapshot.isEmpty) {
-                    recyclerViewKarya.visibility = View.GONE
-                    belumAdaKaryaText.visibility = View.VISIBLE
-                } else {
-                    recyclerViewKarya.visibility = View.VISIBLE
-                    belumAdaKaryaText.visibility = View.GONE
+        val karyaRef = db.collection("products")
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        val userId = currentUser?.uid
 
-                    for (document in querySnapshot.documents) {
-                        val productName = document.getString("title") ?: ""
-                        val productImageUrl = document.getString("url")
-
-                        karyaList.add(Karya(productName, productImageUrl))
-                    }
-                    karyaAdapter.notifyDataSetChanged()
+        if (userId != null) {
+            karyaRef.whereEqualTo("userId", userId).get().addOnSuccessListener { itemkarya ->
+                val products = itemkarya.documents.mapNotNull { doc ->
+                    val karya = doc.toObject(Karya::class.java)
+                    karya?.id = doc.id
+                    karya
                 }
+
+                karyaList.clear()
+                karyaList.addAll(products)
+                karyaAdapter.notifyDataSetChanged()
+
+                checkForEmptyData()
+            }.addOnFailureListener {
+                checkForEmptyData()
             }
-            .addOnFailureListener { exception ->
-                Toast.makeText(requireContext(), "Failed to load products: ${exception.message}", Toast.LENGTH_SHORT).show()
-            }
+        } else {
+            checkForEmptyData()
+        }
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = ProfileFragment()
+    @SuppressLint("NotifyDataSetChanged")
+//    private fun loadProducts(uid: String) {
+//        val db = FirebaseFirestore.getInstance()
+//        db.collection("products")
+//            .whereEqualTo("userId", uid)
+//            .get()
+//            .addOnSuccessListener { querySnapshot ->
+//                karyaList.clear()
+//                if (querySnapshot.isEmpty) {
+//                    recyclerViewKarya.visibility = View.GONE
+//                    belumAdaKaryaText.visibility = View.VISIBLE
+//                } else {
+//                    recyclerViewKarya.visibility = View.VISIBLE
+//                    belumAdaKaryaText.visibility = View.GONE
+//
+//                    for (document in querySnapshot.documents) {
+//                        val productName = document.getString("title") ?: ""
+//                        val productImageUrl = document.getString("url")
+//
+//                        karyaList.add(Karya(productName, url = ))
+//                    }
+//                    karyaAdapter.notifyDataSetChanged()
+//                }
+//            }
+//            .addOnFailureListener { exception ->
+//                Toast.makeText(requireContext(), "Failed to load products: ${exception.message}", Toast.LENGTH_SHORT).show()
+//            }
+//    }
+
+    private fun checkForEmptyData() {
+        if (karyaList.isEmpty()) {
+            belumAdaKaryaText.visibility = View.VISIBLE
+        } else {
+            belumAdaKaryaText.visibility = View.GONE
+        }
     }
+
+
+//    companion object {
+//        @JvmStatic
+//        fun newInstance() = ProfileFragment()
+//    }
 }
