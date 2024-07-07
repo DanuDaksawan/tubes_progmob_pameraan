@@ -9,209 +9,25 @@
     tools:context=".PilihProdukActivity">
 
     <TextView
+        android:id="@+id/titlekeranjangsaya"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
         android:padding="10dp"
         android:gravity="center"
-        android:text="Keranjang Saya"
+        android:text="@string/keranjang_saya_title"
         android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/white"
         android:background="@drawable/button_change_photo"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewKeranjang"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="UselessParent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:outlineSpotShadowColor="@color/primary"
-            tools:ignore="UnusedAttribute">
-
-            <ImageView
-                android:id="@+id/gambarkursi"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="80dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/gambar_3"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="20dp" />
-
-            <TextView
-                android:id="@+id/kursikayu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="80dp"
-                android:paddingHorizontal="32dp"
-                android:text="@string/kursi_kayu"
-                android:textColor="@color/black"
-                android:fontFamily="@font/montserrat_medium"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/hargakursi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:layout_marginTop="110dp"
-                android:paddingHorizontal="32dp"
-                android:text="@string/rp_329_000"
-                android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/kursikayu"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/banyakjumlah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:paddingHorizontal="32dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingTop="190dp"
-                android:text="@string/jumlah_1"
-                android:textSize="12sp"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/harga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:paddingHorizontal="32dp"
-                android:paddingTop="205dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="@string/total_rp_329_000"
-                android:textSize="12sp"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/garisbawah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:src="@drawable/garisbawah"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gambarkursi"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/jumlahpesanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="32dp"
-                android:text="@string/jumlah_pesanan"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/gambarkursi"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/hargapesanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="270dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:layout_marginTop="100dp"
-                android:paddingHorizontal="32dp"
-                android:text="@string/hargapesanan"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/gambarkursi"
-                tools:ignore="DuplicateIds,MissingConstraints" />
-
-            <TextView
-                android:id="@+id/pajak"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="32dp"
-                android:text="@string/pajak"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/jumlahpesanan"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/hargapajak"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="270dp"
-                android:layout_marginTop="1dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="32dp"
-                android:text="@string/hargapajak"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/jumlahpesanan"
-                tools:ignore="DuplicateIds,MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/garisbawah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/garisbawah"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pajak"
-                tools:ignore="ContentDescription,DuplicateIds" />
-
-            <TextView
-                android:id="@+id/totalharga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingHorizontal="32dp"
-                android:text="@string/total_harga"
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/garisbawah"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/totalharga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="270dp"
-                android:layout_marginTop="20dp"
-                android:paddingHorizontal="32dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="@string/total_biayaharga"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/garisbawah"
-                tools:ignore="DuplicateIds,MissingConstraints" />
-
-
-            <Button
-                android:id="@+id/btnkonfirmasipesanan"
-                android:layout_width="352dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/buttonroundedfull"
-                android:text="@string/konfirmasi_pesanan"
-                android:fontFamily="@font/montserrat_bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/totalharga" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>
+        android:layout_below="@id/titlekeranjangsaya"
+        android:padding="10dp" />
 
 </RelativeLayout>

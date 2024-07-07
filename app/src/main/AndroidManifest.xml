@@ -18,6 +18,9 @@
         android:theme="@style/Theme.IntentAndActivity"
         tools:targetApi="31">
         <activity
+            android:name=".KaryaPribadiActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailKaryaActivity"
             android:exported="false" />
         <activity

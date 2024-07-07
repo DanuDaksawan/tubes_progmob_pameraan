@@ -52,7 +52,7 @@ class ProfileFragment : Fragment() {
         recyclerViewKarya.layoutManager = layoutManager
 
         karyaAdapter = KaryaAdapter(karyaList) { karya ->
-            val intent = Intent(requireContext(), DetailKaryaActivity::class.java)
+            val intent = Intent(requireContext(), KaryaPribadiActivity::class.java)
             intent.putExtra("karyaId", karya.id)
             startActivity(intent)
         }

@@ -81,4 +81,5 @@
     <string name="back">Back</string>
     <string name="tambah_ke_keranjang">Tambah ke Keranjang</string>
     <string name="pengaturan_akun">Pengaturan Akun</string>
+    <string name="keranjang_saya_title">Keranjang Saya</string>
 </resources>
