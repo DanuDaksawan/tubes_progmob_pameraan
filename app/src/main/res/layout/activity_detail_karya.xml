@@ -23,8 +23,8 @@
                 <ImageView
                     android:id="@+id/imageKarya"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:scaleType="centerCrop"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
                     android:src="@drawable/gambar_1"
                     app:layout_constraintBottom_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:contentDescription="@string/todo"
-        android:scaleType="centerCrop"
+        android:scaleType="center"
         app:riv_corner_radius="16dp"
         app:riv_oval="false" />
 
@@ -24,7 +24,8 @@
         android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/primary"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/idKarya"

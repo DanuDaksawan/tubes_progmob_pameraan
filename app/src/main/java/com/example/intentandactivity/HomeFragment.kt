@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {
@@ -29,8 +29,9 @@ class HomeFragment : Fragment() {
         noArtTextView = view.findViewById(R.id.belumAdaKaryaText)
 
         val numberOfColumns = 2
-        val layoutManagers = GridLayoutManager(requireContext(), numberOfColumns)
-        recyclerView.layoutManager = layoutManagers
+        val layoutManager = StaggeredGridLayoutManager(numberOfColumns, StaggeredGridLayoutManager.VERTICAL)
+        recyclerView.layoutManager = layoutManager
+
 
         val buttonSearch = view.findViewById<ImageButton>(R.id.tombolsearch)
         buttonSearch.setOnClickListener {

@@ -16,6 +16,7 @@ class KeranjangFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var keranjangAdapter: KeranjangAdapter
     private lateinit var firestore: FirebaseFirestore
+    private lateinit var userId: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,31 +27,54 @@ class KeranjangFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerViewKeranjang)
         recyclerView.layoutManager = LinearLayoutManager(context)
         firestore = FirebaseFirestore.getInstance()
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
 
-        if (userId != null) {
-            firestore.collection("keranjang")
-                .whereEqualTo("userId", userId)
-                .get()
-                .addOnSuccessListener { documents ->
-                    val keranjangItems = mutableListOf<KeranjangItem>()
-                    for (document in documents) {
-                        val karyaId = document.getString("karyaId") ?: ""
-                        val title = document.getString("title") ?: ""
-                        val harga = document.getString("harga") ?: ""
-
-                        keranjangItems.add(KeranjangItem(userId, karyaId, title, harga))
-                    }
-                    keranjangAdapter = KeranjangAdapter(keranjangItems)
-                    recyclerView.adapter = keranjangAdapter
-                }
-                .addOnFailureListener { exception ->
-                    Log.e("KeranjangFragment", "Error getting documents: ", exception)
-                }
+        if (userId.isNotEmpty()) {
+            fetchKeranjangItems()
         } else {
             Log.e("KeranjangFragment", "User not logged in")
         }
 
         return view
+    }
+
+    private fun fetchKeranjangItems() {
+        firestore.collection("keranjang")
+            .whereEqualTo("userId", userId)
+            .get()
+            .addOnSuccessListener { documents ->
+                val keranjangItems = mutableListOf<KeranjangItem>()
+                for (document in documents) {
+                    val id = document.id
+                    val karyaId = document.getString("karyaId") ?: ""
+                    val title = document.getString("title") ?: ""
+                    val harga = document.getString("harga") ?: ""
+                    val imageUrl = document.getString("imageUrl") ?: ""
+
+                    keranjangItems.add(KeranjangItem(id ,userId, karyaId, title, harga, imageUrl))
+                }
+                keranjangAdapter = KeranjangAdapter(keranjangItems) { item ->
+                    deleteKeranjangItem(item)
+                }
+                recyclerView.adapter = keranjangAdapter
+            }
+            .addOnFailureListener { exception ->
+                Log.e("KeranjangFragment", "Error getting documents: ", exception)
+            }
+    }
+
+    private fun deleteKeranjangItem(item: KeranjangItem) {
+        item.id?.let {
+            firestore.collection("keranjang")
+                .document(it)
+                .delete()
+                .addOnSuccessListener {
+                    Log.d("KeranjangFragment", "Item deleted successfully")
+                    fetchKeranjangItems() // Refresh the list after deletion
+                }
+                .addOnFailureListener { exception ->
+                    Log.e("KeranjangFragment", "Error deleting item: ", exception)
+                }
+        }
     }
 }

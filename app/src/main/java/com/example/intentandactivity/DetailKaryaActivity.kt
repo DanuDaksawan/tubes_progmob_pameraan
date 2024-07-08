@@ -46,16 +46,29 @@ class DetailKaryaActivity : AppCompatActivity() {
 
         tambahKeranjangButton.setOnClickListener {
             if (karyaId != null) {
-                tambahKeKeranjang(karyaId, titleTextView.text.toString(), hargaTextView.text.toString())
+                firestore.collection("products").document(karyaId).get()
+                    .addOnSuccessListener { document ->
+                        if (document != null) {
+                            val imageUrl = document.getString("url") ?: ""
+                            tambahKeKeranjang(karyaId, titleTextView.text.toString(), hargaTextView.text.toString(), imageUrl)
+                        } else {
+                            Log.d("Firestore", "No such document")
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.d("Firestore", "get failed with ", exception)
+                    }
+
             }
         }
     }
 
-    private fun fetchKaryaDetails(karyaId: String, imageView: ImageView, titleTextView: TextView, descriptionTextView: TextView, hargaTextView: TextView) {
+    private fun fetchKaryaDetails(karyaId: String, imageView: ImageView, titleTextView: TextView, descriptionTextView: TextView, hargaTextView: TextView): Karya? {
+        var karya: Karya? = null
         firestore.collection("products").document(karyaId).get()
             .addOnSuccessListener { document ->
                 if (document.exists()) {
-                    val karya = document.toObject(Karya::class.java)
+                    karya = document.toObject(Karya::class.java)
                     karya?.let {
                         Glide.with(this)
                             .load(it.url)
@@ -71,16 +84,18 @@ class DetailKaryaActivity : AppCompatActivity() {
             }.addOnFailureListener { exception ->
                 Log.e("DetailKaryaActivity", "Error getting documents: ", exception)
             }
+        return karya
     }
 
-    private fun tambahKeKeranjang(karyaId: String, title: String, harga: String) {
+    private fun tambahKeKeranjang(karyaId: String, title: String, harga: String, imageUrl: String) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId != null) {
             val keranjangItem = hashMapOf(
                 "userId" to userId,
                 "karyaId" to karyaId,
                 "title" to title,
-                "harga" to harga
+                "harga" to harga,
+                "imageUrl" to imageUrl
             )
 
             firestore.collection("keranjang").add(keranjangItem)

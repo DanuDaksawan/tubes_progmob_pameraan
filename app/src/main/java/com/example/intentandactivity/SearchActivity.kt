@@ -11,8 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 
 class SearchActivity : AppCompatActivity() {
@@ -32,16 +32,19 @@ class SearchActivity : AppCompatActivity() {
             insets
         }
 
+        val numberOfColumns = 2
+        val layoutManager = StaggeredGridLayoutManager(numberOfColumns, StaggeredGridLayoutManager.VERTICAL)
+
         searchEditText = findViewById(R.id.search_edit_text)
         searchResultsRecyclerView = findViewById(R.id.hasilcari)
         val backButton = findViewById<ImageButton>(R.id.tombolx)
 
         searchAdapter = KaryaAdapter(searchResultsList) { karya ->
             val intent = Intent(this, DetailKaryaActivity::class.java)
-            intent.putExtra("karyaId", karya.id)
+            intent.putExtra("karyaId", karya.id) // Mengirim ID karya sebagai extra
             startActivity(intent)
         }
-        searchResultsRecyclerView.layoutManager = LinearLayoutManager(this)
+        searchResultsRecyclerView.layoutManager = layoutManager
         searchResultsRecyclerView.adapter = searchAdapter
 
         backButton.setOnClickListener {
@@ -61,7 +64,6 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
     }
@@ -70,7 +72,7 @@ class SearchActivity : AppCompatActivity() {
     private fun searchKarya(query: String) {
         val db = FirebaseFirestore.getInstance()
         db.collection("products")
-            .orderBy("judul")
+            .orderBy("title")
             .startAt(query)
             .endAt(query + "\uf8ff")
             .get()
@@ -79,6 +81,7 @@ class SearchActivity : AppCompatActivity() {
                 for (document in querySnapshot.documents) {
                     val karya = document.toObject(Karya::class.java)
                     if (karya != null) {
+                        karya.id = document.id // Menyimpan ID dokumen
                         searchResultsList.add(karya)
                     }
                 }
