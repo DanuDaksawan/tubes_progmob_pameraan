@@ -1,4 +1,4 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.model
 
 data class Karya(
     var id: String? = null,

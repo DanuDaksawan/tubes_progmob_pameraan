@@ -1,4 +1,4 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,6 +13,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.intentandactivity.R
+import com.example.intentandactivity.adapter.KaryaAdapter
+import com.example.intentandactivity.model.Karya
 import com.google.firebase.firestore.FirebaseFirestore
 
 class SearchActivity : AppCompatActivity() {

@@ -1,9 +1,14 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.intentandactivity.R
+import com.example.intentandactivity.fragment.HomeFragment
+import com.example.intentandactivity.fragment.KeranjangFragment
+import com.example.intentandactivity.fragment.ProfileFragment
+import com.example.intentandactivity.fragment.TambahKaryaFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.FirebaseApp
 

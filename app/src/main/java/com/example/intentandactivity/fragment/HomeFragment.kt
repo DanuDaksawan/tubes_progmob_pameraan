@@ -1,4 +1,4 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.intentandactivity.activity.DetailKaryaActivity
+import com.example.intentandactivity.model.Karya
+import com.example.intentandactivity.adapter.KaryaAdapter
+import com.example.intentandactivity.R
+import com.example.intentandactivity.activity.SearchActivity
 import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.fragment
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,6 +13,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.intentandactivity.activity.EditProfileActivity
+import com.example.intentandactivity.model.Karya
+import com.example.intentandactivity.adapter.KaryaAdapter
+import com.example.intentandactivity.activity.KaryaPribadiActivity
+import com.example.intentandactivity.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

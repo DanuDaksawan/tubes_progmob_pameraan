@@ -18,19 +18,19 @@
         android:theme="@style/Theme.IntentAndActivity"
         tools:targetApi="31">
         <activity
-            android:name=".KaryaPribadiActivity"
+            android:name=".activity.KaryaPribadiActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailKaryaActivity"
+            android:name=".activity.DetailKaryaActivity"
             android:exported="false" />
         <activity
             android:name=".MenuSettingActivity"
             android:exported="false" />
         <activity
-            android:name=".SuccessActivity"
+            android:name=".activity.SuccessActivity"
             android:exported="false" />
         <activity
-            android:name=".KeranjangActivity"
+            android:name=".activity.KeranjangActivity"
             android:exported="false" />
         <activity
             android:name=".PilihProdukActivity"
@@ -39,34 +39,34 @@
             android:name=".TransaksiActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".activity.SearchActivity"
             android:exported="false" />
         <activity
             android:name=".SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".activity.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".TambahKaryaActivity"
+            android:name=".activity.TambahKaryaActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomePageActivity"
+            android:name=".activity.WelcomePageActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".activity.SplashScreenActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Design.NoActionBar">

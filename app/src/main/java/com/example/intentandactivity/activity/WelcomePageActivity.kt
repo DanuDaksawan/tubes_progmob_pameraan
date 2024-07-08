@@ -1,9 +1,10 @@
-package com.example.intentandactivity
+package com.example.intentandactivity.activity
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import com.example.intentandactivity.R
 
 class WelcomePageActivity : Activity() {
     private lateinit var startButton: Button

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/primary"
-    tools:context=".LoginActivity"
+    tools:context=".activity.LoginActivity"
     android:id="@+id/main">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="443dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="340dp"
         android:layout_marginBottom="-13dp"
         android:importantForAccessibility="no"
         android:src="@drawable/putih" />
@@ -128,8 +128,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/buttontransparan"
         android:fontFamily="@font/montserrat_medium"
